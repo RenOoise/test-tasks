@@ -83,10 +83,10 @@ drop@sys-srv-development:~$ sudo systemctl status iperf3
 - [Ответ](https://github.com/RenOoise/test-tasks/blob/master/task%208/Dockerfile)
  
 #### 9.	Какие из этих команд нельзя выполнить в консоли:  
-#### •	zabbix_proxy -c zabbix_proxy.conf -R log_level_increase 	
-#### •	zabbix_proxy -c zabbix_proxy.conf -R config_cache_reload 	
-#### •	zabbix_proxy -c zabbix_proxy.conf -R check_config 	
-#### •	zabbix_proxy -c zabbix_proxy.conf -R housekeeper_execute 	
+##### -	zabbix_proxy -c zabbix_proxy.conf -R log_level_increase 	
+##### -	zabbix_proxy -c zabbix_proxy.conf -R config_cache_reload 	
+##### -	zabbix_proxy -c zabbix_proxy.conf -R check_config 	
+##### -	zabbix_proxy -c zabbix_proxy.conf -R housekeeper_execute 	
 - zabbix_proxy -c zabbix_proxy.conf -R check_config 
 - у zabbix_proxy нет такого параметра
 
