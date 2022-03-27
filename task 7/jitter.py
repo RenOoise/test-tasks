@@ -4,6 +4,8 @@ import time
 host = '192.168.141.158'
 
 result = list()
+
+# делаем 2 пинга
 for i in range(2):
     time.sleep(1)
     output = subprocess.check_output(['ping', '-c', '1', '-q', '-s 150' , host])
