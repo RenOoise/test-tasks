@@ -9,9 +9,6 @@ parser.add_argument("-t", "--template",
                     nargs='+', default=[], 
                     help="Пример: python add_host_to_zabbix.py -n server-02 -ip 127.0.0.1 -t 'Linux generic by Zabbix agent' 'Linux CPU by Zabbix agent'")           
 
-args = parser.parse_args()
-
-
 api = ZabbixAPI('http://192.168.141.60', user='Admin', password='zabbix')
 
 answer=api.do_request('apiinfo.version')
