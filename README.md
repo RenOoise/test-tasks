@@ -81,8 +81,8 @@ drop@sys-srv-development:~$ sudo systemctl status iperf3
 #### Есть условное Node.js приложение, и неправильно написанный Dockerfile, который не будет кэшироваться и будет занимать много места. Нужно переписать его в соответствии с best-practice. 
 
 - [Ответ](https://github.com/RenOoise/test-tasks/blob/master/task%208/Dockerfile)
-```
- #плохой файл  
+
+```#плохой файл  
 #FROM ubuntu:20.04  
 #COPY ./src /app  
 #RUN apt-get update -y  
@@ -103,7 +103,6 @@ RUN npm ci --only=production
 COPY . .
 # запускаю тестовое приложение через cmd
 CMD ["node", "prod.js"]
-
 ```
 
 ### 9.	Какие из этих команд нельзя выполнить в консоли:  
