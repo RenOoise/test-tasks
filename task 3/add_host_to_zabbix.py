@@ -4,14 +4,15 @@ from argparse import ArgumentParser
 parser = ArgumentParser()
 parser.add_argument("-n", "--name",
                     help="имя хоста для добавления или редактирования")
-parser.add_argument("-ip", "--ip_address")
+parser.add_argument("-ip", "--ip-ip_address")
 parser.add_argument("-t", "--template", 
                     nargs='+', default=[], 
                     help="Пример: python add_host_to_zabbix.py -n server-02 -ip 127.0.0.1 -t 'Linux generic by Zabbix agent' 'Linux CPU by Zabbix agent'")           
 
-api = ZabbixAPI('http://192.168.141.60', user='Admin', password='zabbix')
+args = parser.parse_args()
 
-answer=api.do_request('apiinfo.version')
+
+api = ZabbixAPI('http://192.168.141.60', user='Admin', password='zabbix')
 
 
 def edit_host(host_id, template_ids):
