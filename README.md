@@ -29,6 +29,13 @@ for a in  files_list_a:
 ```
 
 ### 3. Напишите скрипт (рекомендуется на python), который добавляет хост в Zabbix и навешивает ему необходимые (перечисленные в качестве параметров скрипта) шаблоны. Если такой хост с необходимыми шаблонами уже есть, то скрипт ничего не делает и сообщает нам об этом. Если хост есть, но не хватает каких-либо шаблонов, то скрипт навешивает недостающие. 
+- [Ссылка на скрипт](https://github.com/RenOoise/test-tasks/blob/master/task%203/add_host_to_zabbix.py)
+- Использование:
+```
+python add_host_to_zabbix.py -n server-08 -ip '127.0.0.9' -t 'Linux generic by Zabbix agent' 'Linux CPU by Zabbix agent'
+```
+- Можно вызвать справку с ключем -h: python add_host_to_zabbix.py -h
+- [Пример выполнения](https://github.com/RenOoise/test-tasks/blob/master/task%203/cmd.png)
 
 ### 4. Составить SQL запрос в базу Zabbix для получения списка Топ 10 неподдерживаемых айтемов. 
  
