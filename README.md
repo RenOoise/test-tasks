@@ -41,7 +41,7 @@ python add_host_to_zabbix.py -n server-08 -ip '127.0.0.9' -t 'Linux generic by Z
 
  - Для получения всех неподдерживаемых итемов смотрим в таблице item_rtdata строки со state=1, выдергиваем по itemid из таблицы items все итемы, группируем и сортируем по убыванию 2 столбца. 
  ```
- select i.name, COUNT(*) AS itemcount from item_rtdata irt, items i where i.itemid=irt.itemid and irt.state='1' and i.status='0' group by i.name order by 2 DESC limit 10;
+ select i.name, COUNT(*) AS itemcount from item_rtdata irt, items i where i.itemid=irt.itemid and irt.state='1' group by i.name order by 2 DESC limit 10;
  ```
 
 ### 5. Напишите systemd-unit, на примере сервера iperf3. Назовите его iperf3.service. В какой директории его нужно создавать? Что сделать, чтобы сервис запустить? Опишите последовательность действий. 
